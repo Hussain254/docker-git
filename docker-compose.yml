@@ -1,0 +1,23 @@
+version: '2.2'
+services:
+ web1:
+  image: "ubuntu"
+  build: /home/zigron/Desktop/Docker1/
+  volumes:
+  - /home/zigron/Desktop/Docker1/:/var/lib/docker/volumes/myvol1/_data/
+  ports:
+  - "5647:80"
+ web2:
+  image: "alpine"
+  build: /home/zigron/Desktop/Docker2/
+  volumes:
+  - /home/zigron/Desktop/Docker2/:/var/lib/docker/volumes/myvol1/_data/
+  ports:
+  - "3467:80"
+ web3:
+  image: "centos"
+  build: /home/zigron/Desktop/Docker3/
+  volumes:
+  - /home/zigron/Desktop/Docker3/:/var/lib/docker/volumes/myvol1/_data/
+  ports:
+  - "8976:80"
